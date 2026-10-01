@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adwaith Asokan | Game Developer & Technical Artist Portfolio</title>
+  <meta name="description" content="Portfolio of Adwaith Asokan - Game Developer specializing in Unity (C#), Unreal Engine 5, and Blender 3D Art. Creator of Hunger Boy, Meat Train, and IGDC 2022 attendee.">
+  <meta name="keywords" content="Adwaith Asokan, Game Developer, Unity Developer, Unreal Engine, Blender 3D, Hunger Boy, Meat Train, IGDC 2022, Game Programming, C#">
+  <meta name="author" content="Adwaith Asokan">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Adwaith Asokan | Game Developer Portfolio">
+  <meta property="og:description" content="Explore games, technical breakdowns, and 3D art by Adwaith Asokan (Hunger Boy, Meat Train, Unreal Engine & Blender showcases).">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Three.js CDN for Interactive 3D Viewport -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+  <!-- Subtle CRT Scanline Atmosphere -->
+  <div class="scanline-overlay"></div>
+
+  <!-- ==========================================================================
+       SITE NAVIGATION
+       ========================================================================== -->
+  <nav class="site-nav" id="main-nav">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo" aria-label="Adwaith Asokan Portfolio Home">
+        <div class="logo-badge">AA</div>
+        <div class="brand-meta">
+          <span class="brand-name">ADWAITH ASOKAN</span>
+          <span class="brand-status"><span class="status-dot"></span> Available for Projects</span>
+        </div>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#projects" class="active">Projects</a></li>
+        <li><a href="#blender-3d">Blender 3D</a></li>
+        <li><a href="#unreal-space">Unreal Engine</a></li>
+        <li><a href="#events">Events (IGDC)</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Web Audio SFX Toggle Button -->
+        <button id="audio-toggle-btn" class="audio-toggle-btn active" title="Sound: Enabled (Click to Mute)" aria-label="Toggle UI Audio">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          </svg>
+        </button>
+
+        <a href="#contact" class="nav-cta">
+          <span>Let's Talk</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </a>
+
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+  <header class="hero-section" id="hero">
+    <canvas id="hero-canvas"></canvas>
+
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge-row">
+          <span class="hud-pill highlight mono-tag">🎮 Game Developer</span>
+          <span class="hud-pill mono-tag">⚡ Gameplay Programmer</span>
+          <span class="hud-pill mono-tag">🎨 Technical Artist</span>
+        </div>
+
+        <h1 class="hero-title">ADWAITH ASOKAN</h1>
+
+        <div class="hero-subtitle">
+          <span>Unity &amp; C#</span>
+          <span class="sep">/</span>
+          <span>Unreal Engine 5</span>
+          <span class="sep">/</span>
+          <span>Blender 3D</span>
+        </div>
+
+        <p class="hero-description">
+          Passionate game developer focused on crafting tactile game mechanics, responsive physics systems, and atmospheric 3D worlds. Experienced in leading gameplay architecture in Unity, developing 3D art pipelines in Blender, and engineering prototypes in Unreal Engine 5. Proud attendee of <strong>IGDC 2022</strong>.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#projects" class="btn btn-primary">
+            <span>Explore Games</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="#blender-3d" class="btn btn-secondary">
+            <span>Interactive 3D Viewport</span>
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <span>Get In Touch</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Visual HUD Frame -->
+      <div class="hero-visual">
+        <div class="hud-panel">
+          <span class="hud-corner-tl"></span>
+          <span class="hud-corner-tr"></span>
+          <span class="hud-corner-bl"></span>
+          <span class="hud-corner-br"></span>
+
+          <div class="hud-header">
+            <span class="hud-title">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="m9 12 2 2 4-4"></path>
+              </svg>
+              DEVELOPER HUD // SPECIFICATION
+            </span>
+            <span class="mono-tag" style="color: var(--accent-emerald);">STATUS: ONLINE</span>
+          </div>
+
+          <div class="profile-card">
+            <div class="profile-avatar-wrap">
+              <img src="assets/images/avatar.svg" alt="Adwaith Asokan Profile Avatar" class="profile-avatar">
+            </div>
+            <div class="profile-info">
+              <h3>Adwaith Asokan</h3>
+              <p>Game Programmer &amp; 3D Modeler</p>
+              <span class="mono-tag" style="color: var(--accent-cyan); font-size: 0.75rem;">Kerala / India</span>
+            </div>
+          </div>
+
+          <div class="hud-stats-grid">
+            <div class="hud-stat-box cyan">
+              <span class="stat-label">PRIMARY ENGINE</span>
+              <span class="stat-val">Unity (C#)</span>
+            </div>
+            <div class="hud-stat-box orange">
+              <span class="stat-label">3D PIPELINE</span>
+              <span class="stat-val">Blender 3D</span>
+            </div>
+            <div class="hud-stat-box gold">
+              <span class="stat-label">KEY CONFERENCE</span>
+              <span class="stat-val">IGDC 2022</span>
+            </div>
+            <div class="hud-stat-box cyan">
+              <span class="stat-label">EXPANDING INTO</span>
+              <span class="stat-val">Unreal Engine 5</span>
+            </div>
+          </div>
+
+          <div class="hud-footer-quote">
+            "Dedicated to creating games that feel tight, responsive, and memorable."
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       FEATURED PROJECTS SECTION
+       ========================================================================== -->
+  <section class="projects-section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag mono-tag">PORTFOLIO SHOWCASE</div>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">
+          From fast-paced precision 2D platforming to gritty 3D survival horror and cutting-edge Unreal Engine 5 prototyping.
+        </p>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="project-filter-bar">
+        <button class="filter-btn active" data-filter="all">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+          All Projects
+        </button>
+        <button class="filter-btn" data-filter="unity">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+          Unity Games
+        </button>
+        <button class="filter-btn" data-filter="unreal">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+          Unreal Engine (WIP)
+        </button>
+        <button class="filter-btn" data-filter="blender">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+          Blender &amp; 3D Art
+        </button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+
+        <!-- PROJECT 1: HUNGER BOY -->
+        <article class="project-card" data-category="unity">
+          <div class="card-media">
+            <span class="media-badge badge-unity">Unity · C#</span>
+            <img src="assets/images/hunger-boy-banner.svg" alt="Hunger Boy 2D Platformer Game Banner" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="project-header-row">
+              <h3 class="project-title">Hunger Boy</h3>
+              <span class="mono-tag" style="color: var(--accent-emerald);">Solo Project</span>
+            </div>
+            <span class="project-genre">2D Precision Platformer · Survival Mechanics</span>
+            <p class="project-summary">
+              A responsive, fast-paced 2D platformer engineered around a dynamic starvation mechanic. Players must navigate perilous hazard-laden ruins while continuously gathering food to sustain stamina and trigger explosive traversal maneuvers.
+            </p>
+
+            <ul class="feature-bullets">
+              <li>Custom kinematic controller with coyote time &amp; jump buffering</li>
+              <li>Dynamic hunger decay loop directly altering player speed &amp; jump</li>
+              <li>Tilemap level design with procedural hazard triggers &amp; patrol AI</li>
+              <li>Camera shake juice, landing dust particles &amp; impact frames</li>
+            </ul>
+
+            <div class="tag-cloud">
+              <span class="tech-tag">Unity 2022</span>
+              <span class="tech-tag">C#</span>
+              <span class="tech-tag">2D Physics</span>
+              <span class="tech-tag">Cinemachine</span>
+              <span class="tech-tag">Tilemaps</span>
+            </div>
+
+            <div class="card-actions">
+              <button class="btn btn-primary" data-open-modal="hunger-boy">
+                <span>Project Deep Dive</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 2: MEAT TRAIN -->
+        <article class="project-card" data-category="unity">
+          <div class="card-media">
+            <span class="media-badge badge-unity">Unity · C#</span>
+            <img src="assets/images/meat-train-banner.svg" alt="Meat Train 3D FPS Survival Horror Game Banner" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="project-header-row">
+              <h3 class="project-title">Meat Train</h3>
+              <span class="mono-tag" style="color: var(--accent-crimson);">3D FPS Survival</span>
+            </div>
+            <span class="project-genre">3D FPS Survival Horror · Tactical Shooter</span>
+            <p class="project-summary">
+              A gritty, claustrophobic 3D survival FPS set aboard a speeding, mutant-infested train hurtling through an apocalyptic wasteland. Scavenge scarce ammo, manage flashlight battery reserves, and survive relentless abominations.
+            </p>
+
+            <ul class="feature-bullets">
+              <li>Procedural weapon sway, iron-sight aiming (ADS) &amp; recoil kickback</li>
+              <li>NavMesh enemy AI with dynamic hearing &amp; sight perception cones</li>
+              <li>Survival economy: ammo scarcity, medkit triage &amp; battery drain</li>
+              <li>Weapons &amp; carriage assets modeled in Blender with PBR texturing</li>
+            </ul>
+
+            <div class="tag-cloud">
+              <span class="tech-tag">Unity HDRP/URP</span>
+              <span class="tech-tag">C#</span>
+              <span class="tech-tag">NavMesh AI</span>
+              <span class="tech-tag">Blender 3D</span>
+              <span class="tech-tag">Post-Processing</span>
+            </div>
+
+            <div class="card-actions">
+              <button class="btn btn-primary" data-open-modal="meat-train">
+                <span>Project Deep Dive</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 3: UNREAL ENGINE PROTOTYPE -->
+        <article class="project-card" data-category="unreal">
+          <div class="card-media">
+            <span class="media-badge badge-unreal">Unreal Engine 5</span>
+            <img src="assets/images/unreal-engine-banner.svg" alt="Unreal Engine 5 Action Game Showcase Banner" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="project-header-row">
+              <h3 class="project-title">Project: Horizon Vanguard</h3>
+              <span class="mono-tag" style="color: #74b9ff;">UE5 Showcase</span>
+            </div>
+            <span class="project-genre">Third-Person Action / Sci-Fi Shooter (In Development)</span>
+            <p class="project-summary">
+              Upcoming prototype exploring high-fidelity sci-fi action combat in Unreal Engine 5. Leveraging UE5's next-generation Nanite virtualized geometry, Lumen real-time global illumination, and Gameplay Ability System (GAS).
+            </p>
+
+            <ul class="feature-bullets">
+              <li>Gameplay Ability System (GAS) for abilities, attributes &amp; cooldowns</li>
+              <li>Lumen real-time dynamic GI &amp; Nanite high-poly environment assets</li>
+              <li>Enhanced Input System with fluid locomotion &amp; procedural aim offsets</li>
+              <li>Blender-to-Unreal automated asset pipeline with collision hulls</li>
+            </ul>
+
+            <div class="tag-cloud">
+              <span class="tech-tag">Unreal Engine 5</span>
+              <span class="tech-tag">C++</span>
+              <span class="tech-tag">Blueprints</span>
+              <span class="tech-tag">GAS</span>
+              <span class="tech-tag">Lumen / Nanite</span>
+            </div>
+
+            <div class="card-actions">
+              <button class="btn btn-primary" data-open-modal="unreal-vanguard">
+                <span>Architecture Breakdown</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 4: UNREAL ENGINE SPACE / MODULAR PLACEHOLDER -->
+        <article class="project-card placeholder-card" data-category="unreal" id="unreal-space">
+          <div class="placeholder-icon-wrap">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+          </div>
+          <span class="mono-tag" style="color: #00d2ff; margin-bottom: 0.5rem;">RESERVED ENGINE SPACE</span>
+          <h3>Next Unreal Engine Project</h3>
+          <p>
+            Space reserved for upcoming Unreal Engine 5 titles, combat prototypes, and C++ gameplay systems currently in R&amp;D.
+          </p>
+          <div class="tag-cloud" style="justify-content: center;">
+            <span class="tech-tag">UE5</span>
+            <span class="tech-tag">C++</span>
+            <span class="tech-tag">Chaos Physics</span>
+            <span class="tech-tag">Niagara VFX</span>
+          </div>
+        </article>
+
+        <!-- PROJECT 5: BLENDER WEAPONS & ENVIRONMENT ARSENAL -->
+        <article class="project-card" data-category="blender">
+          <div class="card-media">
+            <span class="media-badge badge-blender">Blender 3D</span>
+            <img src="assets/images/blender-art-1.svg" alt="Blender Hard-Surface 3D Modeling" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="project-header-row">
+              <h3 class="project-title">Hard-Surface 3D Arsenal</h3>
+              <span class="mono-tag" style="color: var(--accent-orange);">3D Pipeline</span>
+            </div>
+            <span class="project-genre">Weapon Modeling · High-to-Low Poly Baking · PBR</span>
+            <p class="project-summary">
+              Precision hard-surface 3D assets designed in Blender for direct game engine implementation in Unity and Unreal. Includes high-poly sculpting, clean quad topology, optimized UV packing, and normal baking.
+            </p>
+            <div class="tag-cloud">
+              <span class="tech-tag">Blender 4.x</span>
+              <span class="tech-tag">Substance 3D</span>
+              <span class="tech-tag">Hard-Surface</span>
+              <span class="tech-tag">PBR Maps</span>
+              <span class="tech-tag">UV Packing</span>
+            </div>
+            <div class="card-actions">
+              <a href="#blender-3d" class="btn btn-secondary">
+                <span>View in 3D Turntable</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       BLENDER & 3D ART INTERACTIVE SECTION
+       ========================================================================== -->
+  <section class="blender-section" id="blender-3d">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag mono-tag" style="color: var(--accent-orange); border-color: rgba(234, 118, 0, 0.4); background: rgba(234, 118, 0, 0.1);">3D ART &amp; ASSET PIPELINE</div>
+        <h2 class="section-title">Blender 3D Viewport</h2>
+        <p class="section-subtitle">
+          Interactive WebGL viewport. Inspect models in full 360°, inspect wireframe topology, switch lighting, and browse game-ready 3D assets.
+        </p>
+      </div>
+
+      <!-- Live 3D Viewport Component -->
+      <div class="blender-viewport-wrapper">
+        <div class="viewport-toolbar">
+          <div class="viewport-title-group">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-orange)" stroke-width="2">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+              <line x1="12" y1="22.08" x2="12" y2="12"></line>
+            </svg>
+            <h3>REAL-TIME 3D INSPECTOR</h3>
+            <span class="mono-tag" id="viewport-polycount" style="color: var(--accent-cyan); font-size: 0.75rem;">12,480 Tris | PBR Mid-Poly</span>
+          </div>
+
+          <div class="viewport-controls-group">
+            <button class="vp-control-btn active" data-model="turret" title="Load Combat Turret Asset">
+              <span>Combat Turret</span>
+            </button>
+            <button class="vp-control-btn" data-model="core" title="Load Power Core Asset">
+              <span>Energy Core</span>
+            </button>
+            <button class="vp-control-btn" data-model="crate" title="Load Modular Supply Crate">
+              <span>Supply Crate</span>
+            </button>
+            <button class="vp-control-btn" id="vp-wireframe-btn" title="Toggle Wireframe Overlay">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" stroke-dasharray="3 3"></rect></svg>
+              <span>Wireframe</span>
+            </button>
+            <button class="vp-control-btn active" id="vp-rotate-btn" title="Toggle Turntable Rotation">
+              <span>Rotate</span>
+            </button>
+            <button class="vp-control-btn active" id="vp-light-btn" title="Toggle Lighting Preset">
+              <span>Lighting</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="viewport-container">
+          <canvas id="three-canvas"></canvas>
+          <div class="viewport-hint">
+            <span>🖱️ Click &amp; drag to orbit 360° · Scroll wheel to zoom</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blender Gallery Cards -->
+      <div class="blender-gallery-grid">
+        <div class="project-card">
+          <div class="card-media">
+            <img src="assets/images/blender-art-1.svg" alt="Hard-surface weapon model" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h4 class="project-title" style="font-size: 1.15rem;">Sci-Fi Weapon Arsenal</h4>
+            <span class="project-genre">Meat Train Weaponry · High-to-Low Bake</span>
+            <p class="project-summary">
+              Custom-built shotgun and heavy railgun assets modeled in Blender for Meat Train. Optimized for first-person camera fidelity with low-poly baking.
+            </p>
+            <div class="tag-cloud">
+              <span class="tech-tag">Hard-Surface</span>
+              <span class="tech-tag">Substance Painter</span>
+              <span class="tech-tag">Normal Maps</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="card-media">
+            <img src="assets/images/blender-art-2.svg" alt="Modular sci-fi environment container" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h4 class="project-title" style="font-size: 1.15rem;">Modular Environment Kit</h4>
+            <span class="project-genre">Train Interior Props · Tileable Sets</span>
+            <p class="project-summary">
+              Modular bulkheads, electrical generators, ceiling conduits, and industrial crates designed with snapped grid metrics for rapid level prototyping.
+            </p>
+            <div class="tag-cloud">
+              <span class="tech-tag">Kitbash</span>
+              <span class="tech-tag">Modular Grid</span>
+              <span class="tech-tag">Trim Sheets</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="card-media">
+            <img src="assets/images/blender-art-3.svg" alt="Cybernetic creature bust sculpt and rig" loading="lazy">
+          </div>
+          <div class="card-body">
+            <h4 class="project-title" style="font-size: 1.15rem;">Cybernetic Bust &amp; Rig</h4>
+            <span class="project-genre">Sculpting · Retopology · Armatures</span>
+            <p class="project-summary">
+              Organic and cybernetic anatomy sculpt created with Blender digital sculpting tools, retopologized for deformation, and rigged with inverse kinematics.
+            </p>
+            <div class="tag-cloud">
+              <span class="tech-tag">Digital Sculpting</span>
+              <span class="tech-tag">Retopology</span>
+              <span class="tech-tag">Armatures / IK</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       INDUSTRY EVENTS & CONFERENCES (IGDC 2022)
+       ========================================================================== -->
+  <section class="events-section" id="events">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag mono-tag" style="color: var(--accent-gold); border-color: rgba(241, 196, 15, 0.4); background: rgba(241, 196, 15, 0.1);">INDUSTRY JOURNEY</div>
+        <h2 class="section-title">Events Attended</h2>
+        <p class="section-subtitle">
+          Actively engaging with the game development community, learning emerging engine architectures, and connecting with studios and publishers.
+        </p>
+      </div>
+
+      <!-- IGDC 2022 Highlight Card -->
+      <div class="event-feature-card">
+        <div class="event-info">
+          <div class="event-badge-meta">
+            <span class="event-date-pill">NOVEMBER 2022</span>
+            <span class="event-location">📍 HICC, Hyderabad, India</span>
+          </div>
+
+          <h3>IGDC 2022</h3>
+          <h4 style="color: var(--accent-gold); font-size: 1.15rem; margin-bottom: 1rem; font-weight: 600;">
+            India Game Developer Conference
+          </h4>
+
+          <p class="event-description">
+            Attended South Asia's flagship game development conference as a delegate. Immersed in comprehensive masterclasses on game physics, procedural audio, engine optimization, and indie game market viability.
+          </p>
+
+          <ul class="event-takeaways">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Engineering Insights:</strong> Deep dives into modern gameplay state machines, ECS architecture, and multi-threaded physics optimization.</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Indie Showcase Exploration:</strong> Played through dozens of cutting-edge indie mechanics and engaged in technical feedback sessions with creators.</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Industry Networking:</strong> Connected with game directors, technical artists, and publishers across the global games ecosystem.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="event-visual">
+          <img src="assets/images/igdc-banner.svg" alt="Adwaith Asokan IGDC 2022 Attendee Delegate Badge" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       TECHNICAL SKILLS & ARSENAL
+       ========================================================================== -->
+  <section class="skills-section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag mono-tag">CAPABILITIES</div>
+        <h2 class="section-title">Technical Arsenal</h2>
+        <p class="section-subtitle">
+          Comprehensive toolkit spanning gameplay programming, engine systems, 3D pipelines, and mathematical foundations.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Engines -->
+        <div class="skill-category-card">
+          <div class="skill-card-header">
+            <div class="skill-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+            </div>
+            <div>
+              <h3>Game Engines</h3>
+              <span class="mono-tag" style="color: var(--accent-cyan); font-size: 0.75rem;">Core Frameworks</span>
+            </div>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-name-row"><span>Unity 3D / 2D (LTS)</span><span>Advanced</span></div>
+              <div class="skill-progress-bg"><div class="skill-progress-bar" style="width: 90%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name-row"><span>Unreal Engine 5</span><span>Prototyping</span></div>
+              <div class="skill-progress-bg"><div class="skill-progress-bar gold" style="width: 68%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name-row"><span>Godot Engine</span><span>Familiar</span></div>
+              <div class="skill-progress-bg"><div class="skill-progress-bar" style="width: 60%;"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Programming -->
+        <div class="skill-category-card">
+          <div class="skill-card-header">
+            <div class="skill-card-icon" style="color: var(--accent-gold);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </div>
+            <div>
+              <h3>Programming</h3>
+              <span class="mono-tag" style="color: var(--accent-gold); font-size: 0.75rem;">Languages &amp; Code</span>
+            </div>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-name-row"><span>C# (.NET / Unity Scripting)</span><span>Expert</span></div>
+              <div class="skill-progress-bg"><div class="skill-progress-bar gold" style="width: 92%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name-row"><span>C++ (Core / UE5)</span><span>Intermediate</span></div>
+              <div class="skill-progress-bg"><div class="skill-progress-bar" style="width: 65%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name-row"><span>Python (Automation / Tools)</span><span>Competent</span></div>
+              <div class="skill-progress-bg"><div class="skill-progress-bar purple" style="width: 75%;"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3D Art & Pipelines -->
+        <div class="skill-category-card">
+          <div class="skill-card-header">
+            <div class="skill-card-icon" style="color: var(--accent-orange);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+            </div>
+            <div>
+              <h3>3D Art &amp; Tech Art</h3>
+              <span class="mono-tag" style="color: var(--accent-orange); font-size: 0.75rem;">Modeling &amp; Texturing</span>
+            </div>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-name-row"><span>Blender 3D (Hard-Surface)</span><span>Advanced</span></div>
+              <div class="skill-progress-bg"><div class="skill-progress-bar orange" style="width: 86%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name-row"><span>UV Unwrapping &amp; Normal Baking</span><span>Proficient</span></div>
+              <div class="skill-progress-bg"><div class="skill-progress-bar orange" style="width: 82%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name-row"><span>Substance 3D / PBR Texturing</span><span>Intermediate</span></div>
+              <div class="skill-progress-bg"><div class="skill-progress-bar gold" style="width: 72%;"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Game Architecture & Systems -->
+        <div class="skill-category-card">
+          <div class="skill-card-header">
+            <div class="skill-card-icon" style="color: var(--accent-purple);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            </div>
+            <div>
+              <h3>Game Systems</h3>
+              <span class="mono-tag" style="color: var(--accent-purple); font-size: 0.75rem;">Design &amp; Architecture</span>
+            </div>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-name-row"><span>Kinematic Physics &amp; Controllers</span><span>Advanced</span></div>
+              <div class="skill-progress-bg"><div class="skill-progress-bar purple" style="width: 88%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name-row"><span>Enemy AI (FSM &amp; NavMesh)</span><span>Advanced</span></div>
+              <div class="skill-progress-bg"><div class="skill-progress-bar purple" style="width: 85%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name-row"><span>Cinemachine &amp; Game Feel / Juice</span><span>Advanced</span></div>
+              <div class="skill-progress-bg"><div class="skill-progress-bar" style="width: 90%;"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CONTACT SECTION
+       ========================================================================== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-box">
+        <div class="contact-info">
+          <div class="section-tag mono-tag">TRANSMISSION LINK</div>
+          <h3>Let's Build Something Extraordinary</h3>
+          <p>
+            Whether you're looking for a gameplay programmer for your indie studio, technical artist for Unity/Unreal pipelines, or an eager collaborator for your next game jam, I'd love to connect.
+          </p>
+
+          <div class="contact-channels">
+            <a href="mailto:adwaith.asokan.gamedev@example.com" class="channel-item" id="copy-email-btn" title="Click to copy email address">
+              <span class="channel-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </span>
+              <div>
+                <span class="mono-tag" style="font-size: 0.7rem; color: var(--accent-cyan); display: block;">DIRECT EMAIL (CLICK TO COPY)</span>
+                <strong>adwaith.asokan.gamedev@example.com</strong>
+              </div>
+            </a>
+
+            <div class="channel-item">
+              <span class="channel-icon" style="color: var(--accent-emerald);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+              </span>
+              <div>
+                <span class="mono-tag" style="font-size: 0.7rem; color: var(--text-dim); display: block;">TIMEZONE &amp; LOCATION</span>
+                <span>IST (UTC+5:30) · Open to Remote Globally</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-links-row">
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-btn" title="GitHub" aria-label="GitHub Profile">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn" title="LinkedIn" aria-label="LinkedIn Profile">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="https://itch.io" target="_blank" rel="noopener noreferrer" class="social-btn" title="Itch.io Games" aria-label="Itch.io Games">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M8 12h8"></path><path d="M12 8v8"></path></svg>
+            </a>
+            <a href="https://artstation.com" target="_blank" rel="noopener noreferrer" class="social-btn" title="ArtStation 3D Art" aria-label="ArtStation 3D Art">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 19.5h20L12 2z"></path><path d="M12 8l4.5 8h-9z"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Interactive Contact Form -->
+        <form class="contact-form" id="contact-form">
+          <div class="form-group">
+            <label for="form-name" class="form-label">YOUR CALLSIGN / NAME</label>
+            <input type="text" id="form-name" class="form-input" placeholder="e.g. Maya Chen" required>
+          </div>
+
+          <div class="form-group">
+            <label for="form-email" class="form-label">CONTACT EMAIL</label>
+            <input type="email" id="form-email" class="form-input" placeholder="e.g. maya@studio.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="form-subject" class="form-label">PROJECT / OPPORTUNITY TYPE</label>
+            <input type="text" id="form-subject" class="form-input" placeholder="e.g. Unity Gameplay Programmer Role / Indie Jam">
+          </div>
+
+          <div class="form-group">
+            <label for="form-message" class="form-label">TRANSMISSION MESSAGE</label>
+            <textarea id="form-message" class="form-textarea" placeholder="Tell me about your game project, role requirements, or idea..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%;">
+            <span>Dispatch Transmission</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SITE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <strong>ADWAITH ASOKAN</strong> // Game Developer &amp; Technical Artist
+      </div>
+      <div class="footer-credits">
+        Crafted with <span>Unity</span>, <span>Unreal Engine</span> &amp; <span>Blender</span> passion · IGDC 2022
+      </div>
+      <div class="mono-tag" style="color: var(--text-dim);">
+        SYSTEM VERSION 2.4 // 2026
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       PROJECT DEEP-DIVE MODAL DIALOG
+       ========================================================================== -->
+  <div class="modal-overlay" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal dialog">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="modal-media-header">
+        <img id="modal-image" src="" alt="Project Preview">
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-meta-row" id="modal-meta-row"></div>
+        <h2 class="modal-title" id="modal-title">Project Title</h2>
+        <div class="modal-genre" id="modal-genre">Genre &amp; Classification</div>
+
+        <h3 class="modal-section-title">Design &amp; Gameplay Overview</h3>
+        <p class="modal-p" id="modal-overview-text"></p>
+
+        <h3 class="modal-section-title">Key Systems Engineered</h3>
+        <ul class="feature-bullets" id="modal-features-list"></ul>
+
+        <h3 class="modal-section-title">Architecture &amp; Tech Stack</h3>
+        <div class="modal-tech-grid" id="modal-tech-grid"></div>
+
+        <h3 class="modal-section-title">Engineering Challenges Solved</h3>
+        <ul class="feature-bullets" id="modal-challenges-list"></ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/audio-sfx.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/three-viewer.js"></script>
+  <script src="js/projects-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
