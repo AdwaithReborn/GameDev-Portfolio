@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <radialGradient id="flashlight-cone" cx="45%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#fff8db" stop-opacity="0.35"/>
+      <stop offset="40%" stop-color="#ffeaa7" stop-opacity="0.15"/>
+      <stop offset="85%" stop-color="#0b0813" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#050308" stop-opacity="0.98"/>
+    </radialGradient>
+    <linearGradient id="emergency-red" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff1a1a" />
+      <stop offset="100%" stop-color="#660000" />
+    </linearGradient>
+    <linearGradient id="gun-metal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#485460" />
+      <stop offset="50%" stop-color="#1e272e" />
+      <stop offset="100%" stop-color="#0f1418" />
+    </linearGradient>
+    <filter id="horror-glow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="blood-glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background Base: Dark Carriage Corridor -->
+  <rect width="800" height="450" fill="#08070d" />
+
+  <!-- 3D Corridor Perspective Lines -->
+  <!-- Ceiling -->
+  <polygon points="0,0 800,0 520,160 280,160" fill="#12131a" />
+  <!-- Floor -->
+  <polygon points="0,450 800,450 490,290 310,290" fill="#0d0e14" />
+  <!-- Left Wall -->
+  <polygon points="0,0 280,160 310,290 0,450" fill="#181922" />
+  <!-- Right Wall -->
+  <polygon points="800,0 520,160 490,290 800,450" fill="#14151e" />
+
+  <!-- Corridor Depth Doorway / End of Carriage -->
+  <rect x="340" y="180" width="120" height="110" fill="#040306" stroke="#2c3e50" stroke-width="2"/>
+  <!-- Flickering Red Emergency Bulb at End of Corridor -->
+  <circle cx="400" cy="175" r="7" fill="#ff3838" filter="url(#horror-glow)" />
+  <circle cx="400" cy="175" r="2" fill="#ffffff" />
+  <!-- Ominous Silhouette in Distance -->
+  <path d="M390,270 L394,225 L386,235 L383,250 M406,270 L402,225 L412,235 L415,250 M394,225 Q400,210 404,225 Z" stroke="#000000" stroke-width="4" stroke-linecap="round" fill="#000000"/>
+  <!-- Glowing Eyes in the Fog -->
+  <circle cx="397" cy="217" r="1.5" fill="#ff0000" filter="url(#blood-glow)"/>
+  <circle cx="403" cy="217" r="1.5" fill="#ff0000" filter="url(#blood-glow)"/>
+
+  <!-- Left Train Windows (Speed Lines & Storm Outside) -->
+  <polygon points="40,140 180,175 190,265 50,300" fill="#091b29" stroke="#34495e" stroke-width="3" />
+  <line x1="60" y1="180" x2="160" y2="230" stroke="#74b9ff" stroke-width="1.5" stroke-dasharray="20,15" opacity="0.4"/>
+  <line x1="50" y1="210" x2="170" y2="260" stroke="#74b9ff" stroke-width="1" stroke-dasharray="15,25" opacity="0.3"/>
+
+  <!-- Carriage Ribs / Metallic Pillars -->
+  <path d="M120,50 L140,75 L145,360 L125,395 Z" fill="#222f3e" stroke="#10ac84" stroke-width="0.5" opacity="0.8"/>
+  <path d="M220,110 L232,125 L236,310 L224,330 Z" fill="#222f3e" opacity="0.7"/>
+  <path d="M680,50 L660,75 L655,360 L675,395 Z" fill="#222f3e" stroke="#10ac84" stroke-width="0.5" opacity="0.8"/>
+  <path d="M580,110 L568,125 L564,310 L576,330 Z" fill="#222f3e" opacity="0.7"/>
+
+  <!-- Blood Splatters & Scratches on Floor and Walls -->
+  <path d="M260,285 Q280,310 295,295 Q330,340 370,305" stroke="#780206" stroke-width="4" fill="none" opacity="0.7"/>
+  <circle cx="340" cy="320" r="12" fill="#5c0002" opacity="0.6"/>
+  <circle cx="360" cy="335" r="7" fill="#780206" opacity="0.7"/>
+
+  <!-- Flashlight Atmospheric Beam -->
+  <ellipse cx="400" cy="235" rx="380" ry="240" fill="url(#flashlight-cone)" />
+
+  <!-- First-Person Gun / Weapon in Foreground (Combat Shotgun / Assault Rifle) -->
+  <g id="fps-weapon" transform="translate(420, 210)">
+    <!-- Gun Shadow / Depth -->
+    <path d="M140,240 L180,120 L270,110 L340,150 L380,240 Z" fill="#0a0a0c" opacity="0.7"/>
+    
+    <!-- Barrel & Receiver -->
+    <!-- Main Gun Body -->
+    <path d="M60,140 L190,115 L240,120 L270,145 L290,240 L190,240 L140,180 L60,155 Z" fill="url(#gun-metal)" stroke="#576574" stroke-width="2"/>
+    
+    <!-- Heavy Barrel with Heat Vents -->
+    <rect x="0" y="132" width="130" height="24" rx="3" fill="#1e272e" stroke="#485460" stroke-width="1.5"/>
+    <circle cx="10" cy="144" r="5" fill="#000000" stroke="#718093" stroke-width="2"/>
+    <!-- Vent Holes -->
+    <rect x="35" y="138" width="14" height="4" rx="1" fill="#0f1418" />
+    <rect x="55" y="138" width="14" height="4" rx="1" fill="#0f1418" />
+    <rect x="75" y="138" width="14" height="4" rx="1" fill="#0f1418" />
+    <rect x="95" y="138" width="14" height="4" rx="1" fill="#0f1418" />
+
+    <!-- Weapon Flashlight Attachment -->
+    <rect x="40" y="160" width="55" height="15" rx="2" fill="#2d3436" stroke="#636e72" stroke-width="1"/>
+    <ellipse cx="40" cy="167" rx="3" ry="6" fill="#ffeaa7" filter="url(#horror-glow)"/>
+
+    <!-- Tactical Holographic Sight -->
+    <rect x="150" y="95" width="45" height="24" rx="3" fill="#2d3436" stroke="#485460" stroke-width="1.5"/>
+    <rect x="158" y="99" width="30" height="16" fill="rgba(0, 242, 254, 0.15)" stroke="#00f2fe" stroke-width="1.5"/>
+    <!-- Reticle Glow -->
+    <circle cx="173" cy="107" r="4" fill="none" stroke="#ff4757" stroke-width="1.5" filter="url(#horror-glow)"/>
+    <circle cx="173" cy="107" r="1" fill="#ff4757"/>
+
+    <!-- Player Gloved Hand gripping the weapon -->
+    <ellipse cx="230" cy="190" rx="35" ry="25" fill="#2f3542" stroke="#57606f" stroke-width="2"/>
+    <!-- Tactical Knuckle Guards -->
+    <rect x="210" y="180" width="12" height="14" rx="2" fill="#1e272e" />
+    <rect x="225" y="177" width="12" height="14" rx="2" fill="#1e272e" />
+    <rect x="240" y="180" width="12" height="14" rx="2" fill="#1e272e" />
+  </g>
+
+  <!-- FPS Survival HUD Overlay -->
+  <!-- Top Center: Objective Tracker -->
+  <g transform="translate(290, 20)">
+    <rect x="0" y="0" width="220" height="34" rx="4" fill="rgba(6, 6, 10, 0.85)" stroke="rgba(255, 71, 87, 0.4)" stroke-width="1"/>
+    <circle cx="16" cy="17" r="4" fill="#ff4757" filter="url(#horror-glow)"/>
+    <text x="30" y="21" font-family="'Segoe UI', monospace, sans-serif" font-size="11" font-weight="bold" fill="#ff6b81" letter-spacing="1.5">CARRIAGE 04 : INFILTRATE</text>
+  </g>
+
+  <!-- Bottom Left: Health & Vital Stats -->
+  <g transform="translate(40, 360)">
+    <rect x="0" y="0" width="200" height="65" rx="6" fill="rgba(10, 8, 14, 0.9)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5"/>
+    <text x="16" y="24" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="900" fill="#a4b0be" letter-spacing="1">VITALS</text>
+    <text x="145" y="24" font-family="'Courier New', monospace" font-size="13" font-weight="bold" fill="#2ed573">48%</text>
+    <!-- Health Bar -->
+    <rect x="16" y="32" width="168" height="8" rx="3" fill="#2f3542" />
+    <rect x="16" y="32" width="80" height="8" rx="3" fill="#ff4757" filter="url(#horror-glow)"/>
+    <!-- Stamina -->
+    <rect x="16" y="46" width="168" height="5" rx="2" fill="#2f3542" />
+    <rect x="16" y="46" width="125" height="5" rx="2" fill="#1e90ff" />
+  </g>
+
+  <!-- Bottom Right: Ammo & Battery HUD -->
+  <g transform="translate(620, 360)">
+    <rect x="0" y="0" width="140" height="65" rx="6" fill="rgba(10, 8, 14, 0.9)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5"/>
+    <text x="16" y="20" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" fill="#747d8c">AMMO / 12GA</text>
+    <text x="16" y="44" font-family="'Courier New', monospace" font-size="22" font-weight="900" fill="#ffa502">06</text>
+    <text x="48" y="42" font-family="'Courier New', monospace" font-size="14" font-weight="bold" fill="#747d8c">/ 24</text>
+    <!-- Flashlight Battery Indicator -->
+    <rect x="16" y="52" width="70" height="5" rx="2" fill="#2f3542" />
+    <rect x="16" y="52" width="45" height="5" rx="2" fill="#2ed573" />
+    <text x="95" y="56" font-family="'Segoe UI', sans-serif" font-size="9" fill="#ced6e0">FLASHLIGHT</text>
+  </g>
+
+  <!-- Gritty Vignette Screen Border -->
+  <rect width="800" height="450" fill="none" stroke="rgba(255, 71, 87, 0.25)" stroke-width="3"/>
+</svg>

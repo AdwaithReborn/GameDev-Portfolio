@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="sculpt-matcap" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b86b4d"/>
+      <stop offset="60%" stop-color="#733827"/>
+      <stop offset="100%" stop-color="#3b170e"/>
+    </linearGradient>
+    <filter id="clay-glow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="#151515"/>
+
+  <!-- Blender Clay MatCap Background & Lighting Rig -->
+  <circle cx="400" cy="225" r="190" fill="#1e1e1e" stroke="#2d2d2d" stroke-width="2"/>
+
+  <!-- Creature / Cybernetic Combat Helmet / Bust Model -->
+  <g transform="translate(400, 220)">
+    <!-- Neck / Collar -->
+    <path d="M-40,90 L40,90 L60,140 L-60,140 Z" fill="#2d3436" stroke="#57606f" stroke-width="2"/>
+    <line x1="-30" y1="110" x2="30" y2="110" stroke="#ff4757" stroke-width="3"/>
+
+    <!-- Helmet / Head Silhouette -->
+    <!-- Jaw & Chin -->
+    <path d="M-50,30 L-25,85 L25,85 L50,30 Z" fill="url(#sculpt-matcap)" stroke="#e17055" stroke-width="2"/>
+    
+    <!-- Faceplate / Visor (Glowing Cyan) -->
+    <polygon points="-45,0 45,0 35,40 -35,40" fill="#00f2fe" filter="url(#clay-glow)"/>
+    <line x1="-40" y1="10" x2="40" y2="10" stroke="#ffffff" stroke-width="2"/>
+    <line x1="-30" y1="25" x2="30" y2="25" stroke="#ffffff" stroke-width="1.5" opacity="0.7"/>
+
+    <!-- Brow & Cranium -->
+    <path d="M-60,-20 Q-70,-110 0,-110 Q70,-110 60,-20 L45,0 L-45,0 Z" fill="url(#sculpt-matcap)" stroke="#e17055" stroke-width="2"/>
+    
+    <!-- Horns / Cyber Crest -->
+    <path d="M-40,-80 L-90,-130 L-50,-90 Z" fill="#2d3436" stroke="#e17055" stroke-width="1.5"/>
+    <path d="M40,-80 L90,-130 L50,-90 Z" fill="#2d3436" stroke="#e17055" stroke-width="1.5"/>
+
+    <!-- Ear / Audio Sensors -->
+    <rect x="-68" y="-15" width="12" height="30" rx="3" fill="#1e272e" stroke="#00f2fe" stroke-width="1"/>
+    <rect x="56" y="-15" width="12" height="30" rx="3" fill="#1e272e" stroke="#00f2fe" stroke-width="1"/>
+
+    <!-- Rigging Bones (Armature visualization) -->
+    <!-- Head Bone -->
+    <circle cx="0" cy="-30" r="5" fill="#f1c40f"/>
+    <line x1="0" y1="-30" x2="0" y2="40" stroke="#f1c40f" stroke-width="2" stroke-dasharray="4,3"/>
+    <!-- Neck Bone -->
+    <circle cx="0" cy="40" r="5" fill="#f1c40f"/>
+    <line x1="0" y1="40" x2="0" y2="115" stroke="#f1c40f" stroke-width="2" stroke-dasharray="4,3"/>
+    <circle cx="0" cy="115" r="5" fill="#f1c40f"/>
+  </g>
+
+  <!-- Title & Specs Overlay -->
+  <g transform="translate(40, 40)">
+    <text x="0" y="20" font-family="'Segoe UI', sans-serif" font-size="20" font-weight="900" fill="#ffffff" letter-spacing="1">CYBER-CREATURE BUST &amp; RIG</text>
+    <text x="0" y="42" font-family="'Segoe UI', sans-serif" font-size="12" fill="#a4b0be">Sculpting · Retopology · Armature Rigging in Blender</text>
+  </g>
+
+  <g transform="translate(600, 40)">
+    <rect width="160" height="28" rx="14" fill="rgba(241, 196, 15, 0.15)" stroke="#f1c40f" stroke-width="1"/>
+    <text x="20" y="19" font-family="'Courier New', monospace" font-size="12" font-weight="bold" fill="#f1c40f">ARMATURE RIGGED</text>
+  </g>
+</svg>

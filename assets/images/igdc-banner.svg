@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="igdc-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0c29"/>
+      <stop offset="50%" stop-color="#302b63"/>
+      <stop offset="100%" stop-color="#24243e"/>
+    </linearGradient>
+    <linearGradient id="gold-amber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f39c12"/>
+      <stop offset="50%" stop-color="#f1c40f"/>
+      <stop offset="100%" stop-color="#e67e22"/>
+    </linearGradient>
+    <filter id="gold-glow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#igdc-bg)"/>
+
+  <!-- Stage Spotlights from Top -->
+  <polygon points="150,0 250,0 480,450 0,450" fill="#f1c40f" opacity="0.05"/>
+  <polygon points="650,0 550,0 320,450 800,450" fill="#00f2fe" opacity="0.05"/>
+
+  <!-- Conference Delegate Badge Card Graphic (Right/Center tilted) -->
+  <g transform="translate(480, 70) rotate(6)">
+    <!-- Lanyard String -->
+    <path d="M70,-70 L90,10" stroke="#f39c12" stroke-width="8" fill="none"/>
+    <path d="M130,-70 L110,10" stroke="#f39c12" stroke-width="8" fill="none"/>
+    <rect x="90" y="5" width="20" height="15" rx="3" fill="#bdc3c7"/>
+    
+    <!-- Badge Body -->
+    <rect x="0" y="20" width="200" height="290" rx="14" fill="#ffffff" stroke="#e0e0e0" stroke-width="3" filter="url(#gold-glow)"/>
+    
+    <!-- Badge Header -->
+    <rect x="0" y="20" width="200" height="75" rx="14" fill="#1b1464"/>
+    <text x="100" y="52" font-family="'Segoe UI', sans-serif" font-size="18" font-weight="900" fill="#f1c40f" text-anchor="middle" letter-spacing="2">IGDC 2022</text>
+    <text x="100" y="74" font-family="'Segoe UI', sans-serif" font-size="9" font-weight="bold" fill="#ffffff" text-anchor="middle" letter-spacing="1">HYDERABAD, INDIA</text>
+
+    <!-- Badge Photo Silhouette Placeholder -->
+    <circle cx="100" cy="140" r="32" fill="#dfe6e9"/>
+    <circle cx="100" cy="132" r="14" fill="#2d3436"/>
+    <path d="M80,165 C80,150 120,150 120,165 Z" fill="#2d3436"/>
+
+    <!-- Attendee Name & Role -->
+    <text x="100" y="195" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="900" fill="#2d3436" text-anchor="middle">ADWAITH ASOKAN</text>
+    <text x="100" y="212" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" fill="#0984e3" text-anchor="middle">GAME DEVELOPER</text>
+
+    <!-- Barcode / QR Section -->
+    <g transform="translate(35, 230)">
+      <line x1="0" y1="0" x2="0" y2="25" stroke="#2d3436" stroke-width="3"/>
+      <line x1="8" y1="0" x2="8" y2="25" stroke="#2d3436" stroke-width="1.5"/>
+      <line x1="14" y1="0" x2="14" y2="25" stroke="#2d3436" stroke-width="4"/>
+      <line x1="24" y1="0" x2="24" y2="25" stroke="#2d3436" stroke-width="2"/>
+      <line x1="32" y1="0" x2="32" y2="25" stroke="#2d3436" stroke-width="3"/>
+      <line x1="42" y1="0" x2="42" y2="25" stroke="#2d3436" stroke-width="1.5"/>
+      <line x1="50" y1="0" x2="50" y2="25" stroke="#2d3436" stroke-width="5"/>
+      <line x1="62" y1="0" x2="62" y2="25" stroke="#2d3436" stroke-width="2"/>
+      <line x1="72" y1="0" x2="72" y2="25" stroke="#2d3436" stroke-width="3"/>
+      <line x1="82" y1="0" x2="82" y2="25" stroke="#2d3436" stroke-width="2"/>
+      <line x1="92" y1="0" x2="92" y2="25" stroke="#2d3436" stroke-width="4"/>
+      <line x1="102" y1="0" x2="102" y2="25" stroke="#2d3436" stroke-width="1.5"/>
+      <line x1="112" y1="0" x2="112" y2="25" stroke="#2d3436" stroke-width="4"/>
+      <line x1="124" y1="0" x2="124" y2="25" stroke="#2d3436" stroke-width="2"/>
+    </g>
+
+    <!-- Badge Footer Tag -->
+    <rect x="0" y="275" width="200" height="35" rx="4" fill="#f1c40f"/>
+    <text x="100" y="297" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="900" fill="#1b1464" text-anchor="middle" letter-spacing="1">DELEGATE ATTENDEE</text>
+  </g>
+
+  <!-- Left Content Info -->
+  <g transform="translate(60, 90)">
+    <!-- Event Sub-badge -->
+    <rect width="180" height="28" rx="6" fill="rgba(241, 196, 15, 0.2)" stroke="#f1c40f" stroke-width="1.5"/>
+    <text x="14" y="19" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#f1c40f" letter-spacing="1">INDUSTRY EVENT</text>
+
+    <!-- Main Title -->
+    <text x="0" y="70" font-family="'Segoe UI', sans-serif" font-size="38" font-weight="900" fill="#ffffff" letter-spacing="1">IGDC 2022</text>
+    <text x="0" y="105" font-family="'Segoe UI', sans-serif" font-size="18" font-weight="600" fill="#f1c40f">India Game Developer Conference</text>
+    <text x="0" y="130" font-family="'Segoe UI', sans-serif" font-size="14" fill="#ced6e0">South Asia's Largest &amp; Most Prestigious Game Conference</text>
+
+    <!-- Key Takeaway Bullets -->
+    <g transform="translate(0, 160)">
+      <circle cx="8" cy="8" r="4" fill="#00f2fe"/>
+      <text x="24" y="12" font-family="'Segoe UI', sans-serif" font-size="13" fill="#f1f2f6">Explored Indie Showcases, Game Engines &amp; Emerging Tech</text>
+
+      <circle cx="8" cy="38" r="4" fill="#00f2fe"/>
+      <text x="24" y="42" font-family="'Segoe UI', sans-serif" font-size="13" fill="#f1f2f6">Masterclasses on Game Design, Production &amp; Architecture</text>
+
+      <circle cx="8" cy="68" r="4" fill="#00f2fe"/>
+      <text x="24" y="72" font-family="'Segoe UI', sans-serif" font-size="13" fill="#f1f2f6">Direct Industry Networking with Developers &amp; Studios</text>
+    </g>
+
+    <!-- Location & Date Pill -->
+    <g transform="translate(0, 260)">
+      <rect width="250" height="36" rx="18" fill="rgba(0, 242, 254, 0.15)" stroke="#00f2fe" stroke-width="1.5"/>
+      <text x="20" y="23" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="bold" fill="#00f2fe">📍 HICC Hyderabad · November 2022</text>
+    </g>
+  </g>
+</svg>

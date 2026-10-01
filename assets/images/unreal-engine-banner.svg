@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="ue5-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a192f"/>
+      <stop offset="50%" stop-color="#0c2340"/>
+      <stop offset="100%" stop-color="#050d1a"/>
+    </linearGradient>
+    <linearGradient id="lumen-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d2ff"/>
+      <stop offset="50%" stop-color="#3a7bd5"/>
+      <stop offset="100%" stop-color="#00f2fe"/>
+    </linearGradient>
+    <filter id="ue-glow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#ue5-blue)"/>
+
+  <!-- Blueprint Grid Pattern -->
+  <g stroke="rgba(0, 180, 255, 0.08)" stroke-width="1">
+    <path d="M0,50 L800,50 M0,100 L800,100 M0,150 L800,150 M0,200 L800,200 M0,250 L800,250 M0,300 L800,300 M0,350 L800,350 M0,400 L800,400" />
+    <path d="M50,0 L50,450 M100,0 L100,450 M150,0 L150,450 M200,0 L200,450 M250,0 L250,450 M300,0 L300,450 M350,0 L350,450 M400,0 L400,450 M450,0 L450,450 M500,0 L500,450 M550,0 L550,450 M600,0 L600,450 M650,0 L650,450 M700,0 L700,450 M750,0 L750,450" />
+  </g>
+
+  <!-- Blueprint Node Graph Elements in Background -->
+  <!-- Node 1: Event BeginPlay -->
+  <g transform="translate(60, 80)" opacity="0.85">
+    <rect width="180" height="90" rx="6" fill="#1e272e" stroke="#2ed573" stroke-width="2"/>
+    <path d="M0,6 Q0,0 6,0 L174,0 Q180,0 180,6 L180,24 L0,24 Z" fill="#20bf6b"/>
+    <text x="12" y="16" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#ffffff">EVENT TICK / COMBAT</text>
+    <!-- Pins -->
+    <polygon points="160,45 170,40 170,50" fill="#ffffff"/>
+    <text x="110" y="48" font-family="'Segoe UI', sans-serif" font-size="10" fill="#ced6e0">Exec</text>
+    <circle cx="165" cy="65" r="4" fill="#00d2ff"/>
+    <text x="75" y="68" font-family="'Segoe UI', sans-serif" font-size="10" fill="#ced6e0">Delta Seconds</text>
+  </g>
+
+  <!-- Connecting Bezier Spline -->
+  <path d="M230,125 C310,125 330,190 380,190" fill="none" stroke="#2ed573" stroke-width="3" filter="url(#ue-glow)"/>
+
+  <!-- Center Holographic UE5 Insignia & Showcase Title -->
+  <g transform="translate(400, 225)">
+    <!-- Rotating Cyber Ring -->
+    <circle cx="0" cy="0" r="110" fill="none" stroke="rgba(0, 210, 255, 0.25)" stroke-width="2" stroke-dasharray="12,8"/>
+    <circle cx="0" cy="0" r="85" fill="rgba(10, 30, 60, 0.7)" stroke="#00d2ff" stroke-width="2.5" filter="url(#ue-glow)"/>
+    
+    <!-- Stylized Unreal Engine 'U' Emblem -->
+    <circle cx="0" cy="0" r="55" fill="#0c2340" stroke="#00f2fe" stroke-width="2"/>
+    <path d="M-22,-22 C-15,-22 -15,10 -5,14 C-5,14 -12,22 -22,18 C-30,14 -32,-10 -22,-22 Z" fill="#00f2fe"/>
+    <path d="M22,-22 C15,-22 15,10 5,14 C5,14 12,22 22,18 C30,14 32,-10 22,-22 Z" fill="#00f2fe"/>
+    <rect x="-8" y="-18" width="16" height="32" rx="3" fill="#ffffff"/>
+    <polygon points="-16,14 0,30 16,14" fill="#00f2fe"/>
+  </g>
+
+  <!-- Node 2: Ability System Component (Right side) -->
+  <g transform="translate(560, 160)" opacity="0.85">
+    <rect width="180" height="90" rx="6" fill="#1e272e" stroke="#00d2ff" stroke-width="2"/>
+    <path d="M0,6 Q0,0 6,0 L174,0 Q180,0 180,6 L180,24 L0,24 Z" fill="#0984e3"/>
+    <text x="12" y="16" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#ffffff">ABILITY SYSTEM / GAS</text>
+    <polygon points="12,45 22,40 22,50" fill="#ffffff"/>
+    <text x="28" y="48" font-family="'Segoe UI', sans-serif" font-size="10" fill="#ced6e0">Cast</text>
+    <circle cx="15" cy="65" r="4" fill="#ff7675"/>
+    <text x="28" y="68" font-family="'Segoe UI', sans-serif" font-size="10" fill="#ced6e0">Damage Spec</text>
+  </g>
+
+  <!-- High-Tech Badge Floating in Foreground -->
+  <g transform="translate(240, 340)">
+    <rect x="0" y="0" width="320" height="60" rx="30" fill="rgba(6, 18, 36, 0.9)" stroke="#00d2ff" stroke-width="1.5" filter="url(#ue-glow)"/>
+    <circle cx="35" cy="30" r="14" fill="#00d2ff" />
+    <polygon points="32,23 42,30 32,37" fill="#0a192f"/>
+    <text x="65" y="27" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold" fill="#ffffff">UNREAL ENGINE 5</text>
+    <text x="65" y="46" font-family="'Segoe UI', sans-serif" font-size="11" fill="#74b9ff">C++ &amp; Blueprints Prototyping Space</text>
+  </g>
+
+  <!-- Border Frame -->
+  <rect width="800" height="450" fill="none" stroke="rgba(0, 210, 255, 0.3)" stroke-width="3"/>
+</svg>

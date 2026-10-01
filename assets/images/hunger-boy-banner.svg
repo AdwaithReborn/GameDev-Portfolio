@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#140a2b" />
+      <stop offset="50%" stop-color="#2a144e" />
+      <stop offset="100%" stop-color="#0a0518" />
+    </linearGradient>
+    <linearGradient id="neon-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#4facfe" />
+    </linearGradient>
+    <linearGradient id="neon-orange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff7b00" />
+      <stop offset="100%" stop-color="#ffae00" />
+    </linearGradient>
+    <linearGradient id="meat-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff4b4b" />
+      <stop offset="100%" stop-color="#b31217" />
+    </linearGradient>
+    <pattern id="grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255, 255, 255, 0.04)" stroke-width="1" />
+    </pattern>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg-grad)" />
+  <rect width="800" height="450" fill="url(#grid-pattern)" />
+
+  <!-- Distant Background Mountains / City -->
+  <path d="M0,320 L80,290 L160,330 L260,280 L380,340 L500,270 L620,330 L720,290 L800,310 L800,450 L0,450 Z" fill="#1b1038" opacity="0.6"/>
+  <path d="M0,350 L120,310 L240,360 L360,310 L480,350 L600,320 L720,360 L800,330 L800,450 L0,450 Z" fill="#241445" opacity="0.8"/>
+
+  <!-- Moon / Celestial Core -->
+  <circle cx="680" cy="110" r="45" fill="#ffeaa7" opacity="0.8" filter="url(#glow)"/>
+  <circle cx="665" cy="100" r="40" fill="#2a144e" opacity="0.9"/>
+
+  <!-- Level Platforms -->
+  <!-- Main Floating Platforms -->
+  <g fill="#2d3436" stroke="#00f2fe" stroke-width="2">
+    <!-- Left Platform -->
+    <rect x="40" y="320" width="220" height="40" rx="6" fill="#1e272e" />
+    <line x1="40" y1="324" x2="260" y2="324" stroke="#00f2fe" stroke-width="4" filter="url(#glow)"/>
+
+    <!-- Middle High Platform -->
+    <rect x="300" y="240" width="180" height="35" rx="6" fill="#1e272e" />
+    <line x1="300" y1="244" x2="480" y2="244" stroke="#ff007f" stroke-width="4" filter="url(#glow)"/>
+
+    <!-- Right Target Platform -->
+    <rect x="520" y="300" width="240" height="40" rx="6" fill="#1e272e" />
+    <line x1="520" y1="304" x2="760" y2="304" stroke="#00f2fe" stroke-width="4" filter="url(#glow)"/>
+
+    <!-- Floating Mini Platform -->
+    <rect x="230" y="180" width="90" height="20" rx="4" fill="#1e272e" />
+    <line x1="230" y1="183" x2="320" y2="183" stroke="#f1c40f" stroke-width="3"/>
+  </g>
+
+  <!-- Hazards: Spikes below -->
+  <g fill="#e74c3c" stroke="#c0392b" stroke-width="1">
+    <polygon points="265,360 275,340 285,360" />
+    <polygon points="280,360 290,340 300,360" />
+    <polygon points="485,360 495,340 505,360" />
+    <polygon points="500,360 510,340 520,360" />
+  </g>
+
+  <!-- Food / Meat Collectibles -->
+  <!-- Collectible 1: Drumstick/Meat on high platform -->
+  <g transform="translate(370, 195)" filter="url(#glow)">
+    <circle cx="20" cy="20" r="22" fill="rgba(255, 123, 0, 0.2)" />
+    <!-- Bone -->
+    <rect x="8" y="16" width="16" height="6" rx="2" fill="#ecf0f1" transform="rotate(-30 16 19)"/>
+    <circle cx="8" cy="14" r="4" fill="#ecf0f1"/>
+    <circle cx="6" cy="20" r="4" fill="#ecf0f1"/>
+    <!-- Meat chunk -->
+    <ellipse cx="25" cy="20" rx="14" ry="10" fill="url(#meat-grad)" transform="rotate(-20 25 20)"/>
+  </g>
+
+  <!-- Collectible 2: Energy Apple / Burger on right platform -->
+  <g transform="translate(630, 255)" filter="url(#glow)">
+    <circle cx="20" cy="20" r="18" fill="rgba(0, 242, 254, 0.2)" />
+    <circle cx="20" cy="20" r="12" fill="#ff7675" />
+    <path d="M20,8 Q24,4 26,10" stroke="#55efc4" stroke-width="3" fill="none"/>
+  </g>
+
+  <!-- Protagonist: "Hunger Boy" in mid-air Jump/Dash -->
+  <g transform="translate(190, 200)" filter="url(#glow)">
+    <!-- Dash Trail Ghost -->
+    <ellipse cx="-20" cy="25" rx="18" ry="14" fill="#00f2fe" opacity="0.3" />
+    <ellipse cx="-10" cy="25" rx="20" ry="16" fill="#00f2fe" opacity="0.5" />
+    
+    <!-- Character Body (Pixelated/Stylized Hero) -->
+    <!-- Cap/Hair -->
+    <path d="M12,0 C22,-5 38,-3 46,6 L35,12 Z" fill="#ff7675" />
+    <circle cx="28" cy="12" r="14" fill="#ffeaa7" />
+    <!-- Eye & Bandana -->
+    <rect x="20" y="8" width="22" height="6" fill="#0984e3" rx="2"/>
+    <circle cx="34" cy="11" r="2.5" fill="#ffffff" />
+    <!-- Open hungry mouth -->
+    <path d="M30,16 Q36,22 40,16 Z" fill="#d63031" />
+    
+    <!-- Torso / Jacket -->
+    <rect x="18" y="24" width="20" height="22" rx="4" fill="#e17055" />
+    <!-- Backpack -->
+    <rect x="10" y="26" width="9" height="18" rx="3" fill="#636e72" />
+    
+    <!-- Legs in dynamic leap -->
+    <rect x="16" y="44" width="7" height="16" rx="3" fill="#2d3436" transform="rotate(35 16 44)"/>
+    <rect x="27" y="44" width="7" height="15" rx="3" fill="#2d3436" transform="rotate(-30 27 44)"/>
+    <ellipse cx="9" cy="58" rx="6" ry="4" fill="#ffeaa7"/>
+    <ellipse cx="37" cy="56" rx="6" ry="4" fill="#ffeaa7"/>
+
+    <!-- Reaching Arm -->
+    <rect x="34" y="24" width="16" height="6" rx="3" fill="#e17055" transform="rotate(-25 34 24)"/>
+    <circle cx="50" cy="17" r="4.5" fill="#ffeaa7" />
+  </g>
+
+  <!-- HUD Overlay Elements -->
+  <!-- Top Left HUD: Hunger & Stamina Meters -->
+  <g transform="translate(40, 30)">
+    <!-- HUD Background Plate -->
+    <rect x="0" y="0" width="220" height="60" rx="8" fill="rgba(10, 5, 24, 0.85)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5"/>
+    
+    <!-- Hunger Meter Label -->
+    <text x="15" y="22" font-family="'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="11" fill="#ff7675" letter-spacing="1">HUNGER LEVEL</text>
+    <!-- Meter Bar Background -->
+    <rect x="15" y="28" width="190" height="9" rx="4" fill="#2d3436" />
+    <!-- Meter Bar Fill (Glowing Orange/Red) -->
+    <rect x="15" y="28" width="135" height="9" rx="4" fill="url(#neon-orange)" filter="url(#glow)"/>
+    <text x="180" y="22" font-family="'Courier New', monospace" font-size="11" font-weight="bold" fill="#ffae00">72%</text>
+
+    <!-- Stamina Bar -->
+    <rect x="15" y="43" width="190" height="6" rx="3" fill="#2d3436" />
+    <rect x="15" y="43" width="160" height="6" rx="3" fill="#00f2fe" />
+  </g>
+
+  <!-- Top Right HUD: Score & Speedrun Timer -->
+  <g transform="translate(610, 30)">
+    <rect x="0" y="0" width="150" height="50" rx="8" fill="rgba(10, 5, 24, 0.85)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5"/>
+    <text x="15" y="20" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" fill="#a4b0be">MEAT COLLECTED</text>
+    <text x="15" y="38" font-family="'Courier New', monospace" font-size="16" font-weight="900" fill="#f1c40f">08 / 15</text>
+  </g>
+
+  <!-- Cinematic Vignette & Title Overlay -->
+  <rect width="800" height="450" fill="none" stroke="rgba(0, 242, 254, 0.2)" stroke-width="3" />
+</svg>

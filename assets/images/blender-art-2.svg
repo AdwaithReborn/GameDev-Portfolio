@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="neon-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8e2de2"/>
+      <stop offset="100%" stop-color="#4a00e0"/>
+    </linearGradient>
+    <filter id="purple-glow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="#121019"/>
+
+  <!-- Turntable Pedestal / Studio Lighting -->
+  <ellipse cx="400" cy="380" rx="260" ry="50" fill="#1b1824" stroke="#4a00e0" stroke-width="2"/>
+  <ellipse cx="400" cy="370" rx="220" ry="40" fill="#242033" />
+  <ellipse cx="400" cy="360" rx="180" ry="30" fill="#2e2942" stroke="#8e2de2" stroke-width="1.5" filter="url(#purple-glow)"/>
+
+  <!-- Isometric / Perspective Sci-Fi Modular Container / Generator Asset -->
+  <g transform="translate(400, 180)">
+    <!-- Main Box Faces -->
+    <!-- Top Face -->
+    <polygon points="0,-100 130,-30 0,40 -130,-30" fill="#3b3b4f" stroke="#8e2de2" stroke-width="2"/>
+    <!-- Left Face -->
+    <polygon points="-130,-30 0,40 0,160 -130,90" fill="#232332" stroke="#8e2de2" stroke-width="2"/>
+    <!-- Right Face -->
+    <polygon points="0,40 130,-30 130,90 0,160" fill="#2f2f42" stroke="#8e2de2" stroke-width="2"/>
+
+    <!-- Top Details: Vent Grille -->
+    <polygon points="0,-80 80,-35 0,10 -80,-35" fill="#1c1c28"/>
+    <line x1="-50" y1="-50" x2="30" y2="-5" stroke="#00f2fe" stroke-width="2" filter="url(#purple-glow)"/>
+    <line x1="-30" y1="-60" x2="50" y2="-15" stroke="#00f2fe" stroke-width="2" filter="url(#purple-glow)"/>
+    <line x1="-10" y1="-70" x2="70" y2="-25" stroke="#00f2fe" stroke-width="2" filter="url(#purple-glow)"/>
+
+    <!-- Left Details: Pipes & Heavy Bolted Door -->
+    <rect x="-105" y="10" width="80" height="90" rx="4" fill="#181822" stroke="#575778" stroke-width="1.5" transform="skewY(27)"/>
+    <circle cx="-65" cy="55" r="8" fill="#ea7600" filter="url(#purple-glow)"/>
+    <!-- Cables connecting down -->
+    <path d="M-80,110 Q-100,160 -40,150" stroke="#f1c40f" stroke-width="4" fill="none"/>
+    <path d="M-90,115 Q-115,170 -20,155" stroke="#00d2d3" stroke-width="3" fill="none"/>
+
+    <!-- Right Details: High-Voltage Warning & Heat Sinks -->
+    <rect x="25" y="-15" width="80" height="95" rx="4" fill="#1d1d29" stroke="#575778" stroke-width="1.5" transform="skewY(-27)"/>
+    <line x1="35" y1="20" x2="95" y2="-10" stroke="#ff4757" stroke-width="3"/>
+    <line x1="35" y1="40" x2="95" y2="10" stroke="#ff4757" stroke-width="3"/>
+    <line x1="35" y1="60" x2="95" y2="30" stroke="#ff4757" stroke-width="3"/>
+    <line x1="35" y1="80" x2="95" y2="50" stroke="#ff4757" stroke-width="3"/>
+  </g>
+
+  <!-- Title & Specs Overlay -->
+  <g transform="translate(40, 40)">
+    <text x="0" y="20" font-family="'Segoe UI', sans-serif" font-size="20" font-weight="900" fill="#ffffff" letter-spacing="1">MODULAR SCI-FI GENERATOR</text>
+    <text x="0" y="42" font-family="'Segoe UI', sans-serif" font-size="12" fill="#a4b0be">Environment Kitbash · Blender to Unity URP</text>
+  </g>
+
+  <g transform="translate(620, 40)">
+    <rect width="140" height="28" rx="14" fill="rgba(142, 45, 226, 0.2)" stroke="#8e2de2" stroke-width="1"/>
+    <text x="22" y="19" font-family="'Courier New', monospace" font-size="12" font-weight="bold" fill="#00f2fe">4.2K POLYS</text>
+  </g>
+</svg>
